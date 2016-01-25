@@ -1,3 +1,3 @@
-require 'peek/views/git'
-require 'peek-git/version'
-require 'peek-git/railtie'
+require 'peek/views/wrench'
+require 'peek-wrench/version'
+require 'peek-wrench/railtie'

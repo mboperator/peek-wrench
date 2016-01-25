@@ -1,5 +1,5 @@
 module Peek
-  module Git
+  module Wrench
     class Railtie < ::Rails::Engine
     end
   end

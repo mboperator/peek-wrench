@@ -4,6 +4,7 @@
       <%= view.branch_name %>
     </span>
     <span class="hidden">
+      <div id='wrench-mount'></div>
       <% if view.nwo? %>
         <a href="<%= view.compare_url %>" target="_blank"><%= view.short_sha %></a>
       <% else %>
@@ -12,3 +13,15 @@
     </span>
   </span>
 </div>
+
+<script>
+var node;
+var props;
+if (window.WrenchIndicator) {
+  props = {
+    branch: '<%= view.branch_name %>'
+  };
+  node = document.querySelector('#wrench-mount');
+  window.WrenchIndicator(node, props);
+}
+</script>

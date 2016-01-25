@@ -1,6 +1,6 @@
 module Peek
   module Views
-    class Git < View
+    class Wrench < View
       # A view to get some insight into the current state of git
       # for your project. It gives you the sha, branch, and compare
       # url.
@@ -12,7 +12,7 @@ module Peek
       # domain          - Domain name of the location of the repository (Default: github.com).
       # protocol        - The protocol to use in the compare_url (Default: https).
       #
-      # Returns Peek::Views::Git
+      # Returns Peek::Views::Wrench
       def initialize(options = {})
         @nwo = options.delete(:nwo)
         @default_branch = options.fetch(:default_branch, 'master')
@@ -28,7 +28,7 @@ module Peek
 
       # Fetch the current branch name.
       def branch_name
-        @branch_name ||= ENV['GIT_BRANCH'] || `git rev-parse --abbrev-ref HEAD`.chomp
+        @branch_name ||= ENV['WRENCH_BRANCH'] || 'N/A'
       end
 
       # Fetch the current sha if one isn't present.

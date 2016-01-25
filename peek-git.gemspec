@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'peek-git/version'
+require 'peek-wrench/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'peek-git'
+  gem.name          = 'peek-wrench'
   gem.version       = Peek::Git::VERSION
-  gem.authors       = ['Garrett Bjerkhoel']
-  gem.email         = ['me@garrettbjerkhoel.com']
-  gem.description   = %q{Take a peek into the Git info of your Rails application.}
-  gem.summary       = %q{Take a peek into the Git info of your Rails application.}
-  gem.homepage      = 'https://github.com/peek/peek-git'
+  gem.authors       = ['Procore Frontend']
+  gem.email         = ['frontend@procore.com']
+  gem.description   = %q{Take a peek into Wrench.}
+  gem.summary       = %q{Take a peek into Wrench.}
+  gem.homepage      = 'https://github.com/peek/peek-wrench'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
