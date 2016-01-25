@@ -6,8 +6,12 @@
 <script>
 var node;
 var props = {};
-if (window.WrenchIndicator) {
-  node = document.querySelector('#wrench-mount');
-  window.WrenchIndicator(node, props);
+function mountWrenchIndicator() {
+  if (window.WrenchIndicator) {
+    node = document.querySelector('#wrench-mount');
+    window.WrenchIndicator(node, props);
+  }
 }
+
+document.addEventListener("DOMContentLoaded", mountWrenchIndicator);
 </script>
