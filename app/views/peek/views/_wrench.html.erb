@@ -1,26 +1,12 @@
 <div class="bucket">
-  <span class="current-branch css-truncate expandable">
-    <span class="current-branch-name css-truncate-target">
-      <%= view.branch_name %>
-    </span>
-    <span class="hidden">
-      <div id='wrench-mount'></div>
-      <% if view.nwo? %>
-        <a href="<%= view.compare_url %>" target="_blank"><%= view.short_sha %></a>
-      <% else %>
-        <%= view.short_sha %>
-      <% end %>
-    </span>
-  </span>
+  <div id="wrench-mount" class="current-branch css-truncate">
+  </div>
 </div>
 
 <script>
 var node;
-var props;
+var props = {};
 if (window.WrenchIndicator) {
-  props = {
-    branch: '<%= view.branch_name %>'
-  };
   node = document.querySelector('#wrench-mount');
   window.WrenchIndicator(node, props);
 }
