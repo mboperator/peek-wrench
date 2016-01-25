@@ -5,7 +5,7 @@ require 'peek-wrench/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'peek-wrench'
-  gem.version       = Peek::Git::VERSION
+  gem.version       = Peek::Wrench::VERSION
   gem.authors       = ['Procore Frontend']
   gem.email         = ['frontend@procore.com']
   gem.description   = %q{Take a peek into Wrench.}
